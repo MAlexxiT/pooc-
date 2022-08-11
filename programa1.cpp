@@ -1,4 +1,5 @@
-#include <iostream> //biblioteca
+#include "bits/stdc++.h" //biblioteca
+#include <conio.h>
 
 /*using std::cout;
 std::cin;
@@ -9,6 +10,7 @@ int main(){
     int number1 = 0;
     int number2 = 0; //declaracion de la variable (tipo de dato, identificador de la variable) = inicializacion de la variable
     int number3= 0;
+    float prom;
 
     cout<<"Emter two integers to compare: "; //flujo de salida
     cin>> number1 >>number2>>number3; //flujo de entrada
@@ -48,5 +50,6 @@ int main(){
     if(number1<=number2 && number2>=number3){
         cout<<number1<<"<="<<number2<<">="<<number3<<endl;
     }
-    cout<< "El promedio es: "<<(number1+number2+number3)/3<<endl; //imprime el promedio de los 3 numeros
+    prom=((float)number1+(float)number2+(float)number3)/3;
+    cout<< "El promedio es: "<<prom<<endl; //imprime el promedio de los 3 numeros
 }
