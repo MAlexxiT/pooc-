@@ -3,34 +3,52 @@ using namespace std;
 
 int main(){
     float num;
-    float arr[5][5];
+    string materia;
+    map <int,string> mp;
+    int n,m;
+    float **arr= new float*[n];
     float promedio=0;
-    for (int i = 0; i < 5; i++)
+
+    cout<<"Ingresa el numero de estudiantes: ";
+    cin>>n;
+    cout<<"Ingresa el numero de materias: ";
+    cin>>m;
+    for (int i = 0; i < m; i++)
     {
-        for (int i = 0; i < 5; i++)
+        cout<<"Asigna la materia al numero "<<i+1<<" : ";
+        cin>>materia;
+        mp[i+1]=materia;
+    }
+    
+    for(int i =0; i<n;i++){
+    arr[i] = new float[m];
+    }
+    for (int i = 0; i < n; i++)
+    {
+        for (int i = 0; i < m; i++)
         {
             arr[i][i]=0;
         }
         
     }
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < 5; j++)
+        for (int j = 0; j < m; j++)
         {
-            cout<<"Ingresa la calificacion del indice ["<<i<<"] ["<<j<<"] :";
+            cout<<"Ingresa la calificacion del estudiante "<<i+1<<" en la materia "<<mp[j+1]<<" :";
             cin>>num;
             arr[i][j]=num;
-            cout<<"La calificacion en el indice ["<<i<<"] ["<<j<<"] es: "<<arr[i][j]<<endl<<endl;
+            cout<<"La calificacion del estudiante "<<i+1<<" en la materia "<<mp[j+1]<<" es: "<<arr[i][j]<<endl<<endl;
         }
     }
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < 5; j++)
+        for (int j = 0; j < m; j++)
         {
             promedio+=arr[i][j];
         }
     }
     
-    cout<<"El promedio final del grupo es: "<<promedio/(5*5)<<endl;
+    cout<<"El promedio final del grupo es: "<<promedio/(n*m)<<endl;
     
 }
