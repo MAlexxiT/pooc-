@@ -6,13 +6,14 @@ int main(){
     string materia;
     map <int,string> mp;
     int n,m;
-    float **arr= new float*[n];
+    
     float promedio=0;
 
     cout<<"Ingresa el numero de estudiantes: ";
     cin>>n;
     cout<<"Ingresa el numero de materias: ";
     cin>>m;
+    float **arr= new float*[n];
     for (int i = 0; i < m; i++)
     {
         cout<<"Asigna la materia al numero "<<i+1<<" : ";
@@ -21,13 +22,13 @@ int main(){
     }
     
     for(int i =0; i<n;i++){
-    arr[i] = new float[m];
+        arr[i] = new float[m];
     }
     for (int i = 0; i < n; i++)
     {
-        for (int i = 0; i < m; i++)
+        for (int j = 0; j < m; j++)
         {
-            arr[i][i]=0;
+            arr[i][j]=0;
         }
         
     }
