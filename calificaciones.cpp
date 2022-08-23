@@ -3,14 +3,17 @@ using namespace std;
 
 int main(){
     float num;
-    float arr[5];
+    int n;
+    float *arr= new float[n];
     float promedio=0;
-    for (int i = 0; i < 5; i++)
+    cout<<"ingresa el numero de materias: ";
+    cin>>n;
+    for (int i = 0; i < n; i++)
     {
         arr[i]=0;
     }
     
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < n; i++)
     {
         cout<<"Ingresa la calificacion del indice "<<i<<" : ";
         cin>>num;
@@ -18,6 +21,6 @@ int main(){
         cout<<"La calificacion en el indice "<<i<<" es: "<<arr[i]<<endl<<endl;
         promedio+=arr[i];
     }
-    cout<<"El promedio final es: "<<promedio/5<<endl;
+    cout<<"El promedio final es: "<<promedio/n<<endl;
     
 }
